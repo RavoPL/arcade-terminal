@@ -46,3 +46,5 @@ After the repository is forked, you can deploy it by following these steps:
 4. Click on *Deploy*
 
 ## Credits
+
+* *Code Institute* for the deployment terminal on Heroku
