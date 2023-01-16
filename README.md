@@ -31,4 +31,18 @@ Arcade Terminal is based on the classic game of Snake, which originated in 1976 
 
 ## Deployment
 
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+You can fork the repository by following these steps:
+
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+
+After the repository is forked, you can deploy it by following these steps:
+
+1. Create a new Heroku app
+2. Set the buildbacks to *Python* and *NodeJS*, in that exact order
+3. Link the Heroku app to the repository you have forked
+4. Click on *Deploy*
+
 ## Credits
