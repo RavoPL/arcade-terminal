@@ -19,6 +19,14 @@ Developed by **Dorian Wolarz**, a Code Institute Student
 
 Arcade Terminal is based on the classic game of Snake, which originated in 1976 in the arcade game *'Blockade'*.
 
+The player uses his arrow keys to move the titular Snake around the board.
+
+If the Snake finds an apple, it eats it and grows larger by one segment.
+
+The game ends when the Snake collides with the edge of the terminal screen or with its own tail.
+
+The goal of the game is to make the Snake as large as possible before that happens.
+
 ## Features
 
 ## Data Model
