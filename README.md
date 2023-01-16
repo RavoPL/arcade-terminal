@@ -9,17 +9,23 @@ Developed by **Dorian Wolarz**, a Code Institute Student
 1. [How to Play](#how-to-play)
 2. [Features](#features)
 3. [Data Model](#data-model)
-4. [Testing](#testing)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
+4. [Planning](#planning)
+5. [Technologies Used](#technologies-used)
+6. [Testing](#testing)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
 
 ## How to Play
 
-Arcade Terminal is based on the classic game of Snake, which originated in 1976 in the arcade game 'Blockade'.
+Arcade Terminal is based on the classic game of Snake, which originated in 1976 in the arcade game *'Blockade'*.
 
 ## Features
 
 ## Data Model
+
+## Planning
+
+## Technologies Used
 
 ## Testing
 
