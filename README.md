@@ -6,6 +6,12 @@ Developed by **Dorian Wolarz**, a Code Institute Student
 ![Image of My Website on Multiple Devices](IMAGE LINK)
 
 ## Contents
+1. [How to Play](#how-to-play)
+2. [Features](#features)
+3. [Data Model](#data-model)
+4. [Testing](#testing)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
 
 ## How to Play
 
