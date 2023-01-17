@@ -16,9 +16,16 @@ def main(stdscr):
     # sets the screen width and screen height of the bounding box
     sw = 80
     sh = 24
-    # creates a new window and the border around it
+    # creates a new window and the border around it, listens for key strokes
     new_window = curses.newwin(sh + 1, sw + 1, 0, 0)
     new_window.border()
+    new_window.keypad(True)
+
+    # listens for the 'Q' key press so the user can quit the terminal screen
+    while True:
+        key = new_window.getch()
+        if key == ord("q"):
+            break
 
 """
 Wrapper allows to restore the terminal to a sane state
