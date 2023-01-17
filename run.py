@@ -27,12 +27,15 @@ def main(stdscr):
     snakepos_y = int(sh / 2)
 
     # three tuples for three starting parts of the Snake
-    # starting with 'Y' value because origin of 'curse' box is top left corner
+    # starts with 'Y' value because origin of 'curse' box is top left corner
     snake = [
         (snakepos_y, snakepos_x),
         (snakepos_y, snakepos_x - 1),
         (snakepos_y, snakepos_x - 2),
     ]
+
+    # defines the starting right movement of the Snake
+    snake_start = curses.KEY_RIGHT
 
     # listens for the 'Q' key press so the user can quit the terminal screen
     while True:
