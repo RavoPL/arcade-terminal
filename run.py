@@ -50,6 +50,13 @@ def main(stdscr):
         # creates a new instance of the Snake's head
         new_head = None
 
+        # collision check on the border of the terminal screen
+        # displays game over screen if Snake is at the edge of SW or edge of SH
+        if snake[0][1] in (0, sw) or snake[0][0] in (0, sh):
+            curses.endwin()
+            print("GAME OVER!")
+            quit()
+
         # listens for the 'Q' key press so the user can quit the terminal screen
         key = new_window.getch()
         if key == ord("q"):
