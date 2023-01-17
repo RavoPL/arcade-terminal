@@ -20,6 +20,8 @@ def main(stdscr):
     new_window = curses.newwin(sh + 1, sw + 1, 0, 0)
     new_window.border()
     new_window.keypad(True)
+    # refreshes the terminal screen every 100 miliseconds
+    new_window.timeout(100)
 
     # starting position of the Snake at left center of terminal screen
     # value turned to int so Snake can be drawn
@@ -60,6 +62,10 @@ def main(stdscr):
         snake.insert(0, new_head)
         # gets rid of the last position of the Snake's tail
         snake.pop()
+
+        # draws the new head of the Snake in the Python terminal
+        # styles the Snake to a diamond shape
+        new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
 
 """
 Wrapper allows to restore the terminal to a sane state
