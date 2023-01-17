@@ -56,4 +56,5 @@ After the repository is forked, you can deploy it by following these steps:
 ## Credits
 
 * *Code Institute* for the deployment terminal on Heroku
-* [Documentation for *curses* library and *curses.textpad* input widget](https://docs.python.org/3/library/curses.html#module-curses.textpad)
+* [Documentation for *curses* library](https://docs.python.org/3/library/curses.html#module-curses)
+* [Documentation for *random* library](https://www.w3schools.com/python/module_random.asp)
