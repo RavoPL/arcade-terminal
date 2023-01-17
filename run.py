@@ -29,19 +29,37 @@ def main(stdscr):
     # three tuples for three starting parts of the Snake
     # starts with 'Y' value because origin of 'curse' box is top left corner
     snake = [
+        # head
         (snakepos_y, snakepos_x),
+        # middle
         (snakepos_y, snakepos_x - 1),
+        # tail
         (snakepos_y, snakepos_x - 2),
     ]
 
     # defines the starting right movement of the Snake
     snake_start = curses.KEY_RIGHT
 
-    # listens for the 'Q' key press so the user can quit the terminal screen
+    """
+    Main while loop that continues to run and execute for
+    as long as the game is being played
+    """
     while True:
+        # creates a new instance of the Snake's head
+        new_head = None
+
+        # listens for the 'Q' key press so the user can quit the terminal screen
         key = new_window.getch()
         if key == ord("q"):
             break
+        # creates a new head of the Snake upon movement to the right
+        if snake_start == curses.KEY_RIGHT:
+            new_head = (snake[0][0], snake[0][1] + 1)
+        
+        # inserts a new head of the Snake at the correct location
+        snake.insert(0, new_head)
+        # gets rid of the last position of the Snake's tail
+        snake.pop()
 
 """
 Wrapper allows to restore the terminal to a sane state
