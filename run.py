@@ -40,7 +40,7 @@ def main(stdscr):
     ]
 
     # defines the starting right movement of the Snake
-    snake_start = curses.KEY_RIGHT
+    snake_move = curses.KEY_RIGHT
 
     """
     Main while loop that continues to run and execute for
@@ -62,8 +62,17 @@ def main(stdscr):
         if key == ord("q"):
             break
         # creates a new head of the Snake upon movement to the right
-        if snake_start == curses.KEY_RIGHT:
+        if snake_move == curses.KEY_RIGHT:
             new_head = (snake[0][0], snake[0][1] + 1)
+        # creates a new head of the Snake upon movement to the left
+        elif snake_move == curses.KEY_LEFT:
+            new_head = (snake[0][0], snake[0][1] - 1)
+        # creates a new head of the Snake upon donwards movement
+        elif snake_move == curses.KEY_DOWN:
+            new_head = (snake[0][0] + 1, snake[0][1])
+        # creates a new head of the Snake upon upwards movement
+        elif snake_move == curses.KEY_UP:
+            new_head = (snake[0][0] - 1, snake[0][1])
         
         # inserts a new head of the Snake at the correct location
         snake.insert(0, new_head)
