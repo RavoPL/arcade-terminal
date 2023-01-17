@@ -1,3 +1,6 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+"""
+Imports the 'Curses' built-in Python library with the texpad widget
+which can be used to create a rectangular bounding box within the terminal
+"""
+import curses
+from curses import textpad
