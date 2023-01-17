@@ -61,6 +61,12 @@ def main(stdscr):
         key = new_window.getch()
         if key == ord("q"):
             break
+
+        # allows for continuous movement of Snake
+        if key == -1:
+            snake_move = snake_move
+        else:
+            snake_move = key
         # creates a new head of the Snake upon movement to the right
         if snake_move == curses.KEY_RIGHT:
             new_head = (snake[0][0], snake[0][1] + 1)
