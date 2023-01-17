@@ -60,8 +60,10 @@ def main(stdscr):
         
         # inserts a new head of the Snake at the correct location
         snake.insert(0, new_head)
+        
         # gets rid of the last position of the Snake's tail
-        snake.pop()
+        tail_remove = snake.pop()
+        new_window.addch(tail_remove[0], tail_remove[1], " ")
 
         # draws the new head of the Snake in the Python terminal
         # styles the Snake to a diamond shape
