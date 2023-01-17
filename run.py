@@ -14,9 +14,11 @@ def main(stdscr):
     # disables the blinking of the cursor in terminal
     curses.curs_set(0)
     # sets the screen width and screen height of the bounding box
-    sw = 70
-    sh = 20
-
+    sw = 80
+    sh = 24
+    # creates a new window and the border around it
+    new_window = curses.newwin(sh + 1, sw + 1, 0, 0)
+    new_window.border()
 
 """
 Wrapper allows to restore the terminal to a sane state
