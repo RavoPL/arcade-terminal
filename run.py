@@ -2,8 +2,8 @@
 Imports the 'curses' built-in Python library which can be used to create
 a terminal-independent screen-painting and key-handling facility
 """
-import curses
 import random
+import curses
 
 """
 Main function that sets the bounding box border
@@ -41,8 +41,8 @@ def main(stdscr):
     ]
 
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
-    apple = (int(sw / 2), int(sh / 2))
-    new_window.addch(apple[1], apple[0], curses.ACS_DEGREE)
+    apple = (int(sh / 2), int(sw / 2))
+    new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
     
     # defines the starting right movement of the Snake
     snake_move = curses.KEY_RIGHT
@@ -99,28 +99,29 @@ def main(stdscr):
         # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
-
+        
+        # gets rid of the last position of the Snake's tail
+        tail_remove = snake.pop()
+        new_window.addstr(tail_remove[0], tail_remove[1], " ")
+        
         # checks if the Snake ate the apple, then it removes it and generates
         # a new one within the confines of the terminal box
         if snake[0] == apple:
             apple = None
             # runs the following code so long as an apple is not present in the terminal box
             while apple is None:
-                new_apple = (random.randint(0, sw), random.randint(0, sh))
+                new_apple = (random.randint(0, sh-1), random.randint(0, sw-1))
                 # checks if position for apple spawning doesn't contain the Snake
                 # spawns a new apple if position is valid
                 if new_apple in snake:
                     new_apple = None
                 else:
                     apple = new_apple
-        
-        # gets rid of the last position of the Snake's tail
-        tail_remove = snake.pop()
-        new_window.addstr(tail_remove[0], tail_remove[1], " ")
+            # continuously draws new apples in random locations
+            new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
 
         # continously refreshes the window to update the terminal screen
         new_window.refresh()
-        
 
 """
 Wrapper allows to restore the terminal to a sane state
