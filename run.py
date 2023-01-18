@@ -3,6 +3,7 @@ Imports the 'curses' built-in Python library which can be used to create
 a terminal-independent screen-painting and key-handling facility
 """
 import curses
+import random
 
 """
 Main function that sets the bounding box border
@@ -109,6 +110,12 @@ def main(stdscr):
         # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
+
+        # checks if the Snake ate the apple, then it removes it and generates
+        # a new one within the confines of the terminal box
+        if snake[0] == apple:
+            apple = None
+            new_apple = (random.randint(0, sw), random.randint(0, sh))
         
         # gets rid of the last position of the Snake's tail
         tail_remove = snake.pop()
