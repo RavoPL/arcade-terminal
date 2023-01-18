@@ -104,7 +104,15 @@ def main(stdscr):
         # a new one within the confines of the terminal box
         if snake[0] == apple:
             apple = None
-            new_apple = (random.randint(0, sw), random.randint(0, sh))
+            # runs the following code so long as an apple is not present in the terminal box
+            while apple is None:
+                new_apple = (random.randint(0, sw), random.randint(0, sh))
+                # checks if position for apple spawning doesn't contain the Snake
+                # spawns a new apple if position is valid
+                if new_apple in snake:
+                    new_apple = None
+                else:
+                    apple = new_apple
         
         # gets rid of the last position of the Snake's tail
         tail_remove = snake.pop()
