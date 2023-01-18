@@ -42,6 +42,9 @@ def main(stdscr):
         (snakepos_y, snakepos_x - 2),
     ]
 
+    # creates the initial apple centered in the middle of the screen
+
+    
     # defines the starting right movement of the Snake
     snake_move = curses.KEY_RIGHT
 
@@ -56,11 +59,10 @@ def main(stdscr):
         # collision check on the border of the terminal screen
         # displays game over screen if Snake is at the edge of SW or edge of SH
         if snake[0][1] in (0, sw) or snake[0][0] in (0, sh):
-            curses.endwin()
-            print("GAME OVER!")
-            # msg = "GAME OVER!"
-            # new_window.addstr(sh//2, sw//2 - len(msg)//2, msg)
-            stdscr.getch()
+            game_over = "GAME OVER! You collided with the wall! Press 'Q' to exit"
+            new_window.addstr(int(sh//2), int(sw//2) - len(game_over)//2, game_over)
+            new_window.nodelay(0)
+            new_window.getch()
             quit()
         # displays game over screen if Snake's head collides with any other body part
         if snake[0] in snake[1:]:
