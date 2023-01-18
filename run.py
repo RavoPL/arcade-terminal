@@ -47,7 +47,7 @@ def main(stdscr):
     as long as the game is being played
     """
     while True:
-        # creates a new instance of the Snake's head
+        # creates a new, empty instance of the Snake's head
         new_head = None
 
         # collision check on the border of the terminal screen
@@ -73,22 +73,25 @@ def main(stdscr):
         else:
             snake_move = key
         
-        # listens for key input on arrow keys, which will allow to change movement of Snake
-        key = new_window.getch()
+        # listens for key input on arrow keys, which will change movement of Snake
         if key in [curses.KEY_RIGHT, curses.KEY_LEFT, curses.KEY_DOWN, curses.KEY_UP]:
             snake_move = key
+        
+        # current, active head of the Snake
+        head = snake[0]
+
         # creates a new head of the Snake upon movement to the right
         if snake_move == curses.KEY_RIGHT:
-            new_head = (snake[0][0], snake[0][1] + 1)
+            new_head = (head[0], head[1] + 1)
         # creates a new head of the Snake upon movement to the left
         elif snake_move == curses.KEY_LEFT:
-            new_head = (snake[0][0], snake[0][1] - 1)
+            new_head = (head[0], head[1] - 1)
         # creates a new head of the Snake upon donwards movement
         elif snake_move == curses.KEY_DOWN:
-            new_head = (snake[0][0] + 1, snake[0][1])
+            new_head = (head[0] + 1, head[1])
         # creates a new head of the Snake upon upwards movement
         elif snake_move == curses.KEY_UP:
-            new_head = (snake[0][0] - 1, snake[0][1])
+            new_head = (head[0] - 1, head[1])
         
         # inserts a new head of the Snake, styles it to a hash symbol
         snake.insert(0, new_head)
@@ -97,6 +100,10 @@ def main(stdscr):
         # gets rid of the last position of the Snake's tail
         tail_remove = snake.pop()
         new_window.addstr(tail_remove[0], tail_remove[1], " ")
+
+        # continously refreshes the window to update the terminal screen
+        new_window.refresh()
+        
 
 """
 Wrapper allows to restore the terminal to a sane state
