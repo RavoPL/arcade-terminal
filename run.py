@@ -72,6 +72,11 @@ def main(stdscr):
             snake_move = snake_move
         else:
             snake_move = key
+        
+        # listens for key input on arrow keys, which will allow to change movement of Snake
+        key = new_window.getch()
+        if key in [curses.KEY_RIGHT, curses.KEY_LEFT, curses.KEY_DOWN, curses.KEY_UP]:
+            snake_move = key
         # creates a new head of the Snake upon movement to the right
         if snake_move == curses.KEY_RIGHT:
             new_head = (snake[0][0], snake[0][1] + 1)
