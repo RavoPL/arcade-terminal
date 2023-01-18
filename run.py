@@ -58,13 +58,15 @@ def main(stdscr):
         if snake[0][1] in (0, sw) or snake[0][0] in (0, sh):
             curses.endwin()
             print("GAME OVER!")
+            # msg = "GAME OVER!"
+            # new_window.addstr(sh//2, sw//2 - len(msg)//2, msg)
             stdscr.getch()
             quit()
         # displays game over screen if Snake's head collides with any other body part
         if snake[0] in snake[1:]:
             curses.endwin()
             print("GAME OVER!")
-            stdscr.getch()
+            # stdscr.getch()
             quit()
 
         # listens for the 'Q' key press so the user can quit the terminal screen
