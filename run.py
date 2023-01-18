@@ -13,6 +13,9 @@ def main(stdscr):
     stdscr.clear()
     # disables the blinking of the cursor in terminal
     curses.curs_set(0)
+    """
+    stdscr.nodelay(1)
+    """
     # sets the screen width and screen height of the bounding box
     sw = 80
     sh = 24
@@ -68,10 +71,12 @@ def main(stdscr):
             break
 
         # allows for continuous movement of Snake
+        """
         if key == -1:
             snake_move = snake_move
         else:
             snake_move = key
+        """
         
         # listens for key input on arrow keys, which will change movement of Snake
         if key in [curses.KEY_RIGHT, curses.KEY_LEFT, curses.KEY_DOWN, curses.KEY_UP]:
