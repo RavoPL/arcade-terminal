@@ -41,8 +41,8 @@ def main(stdscr):
     ]
 
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
-    apple = (int(sw/2), int(sh/2))
-    # new_window.addch(apple[0], apple[1])
+    apple = (int(sw / 2), int(sh / 2))
+    new_window.addch(apple[1], apple[0], curses.ACS_DEGREE)
     
     # defines the starting right movement of the Snake
     snake_move = curses.KEY_RIGHT
