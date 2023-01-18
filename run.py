@@ -85,16 +85,13 @@ def main(stdscr):
         elif snake_move == curses.KEY_UP:
             new_head = (snake[0][0] - 1, snake[0][1])
         
-        # inserts a new head of the Snake at the correct location
+        # inserts a new head of the Snake, styles it to a hash symbol
         snake.insert(0, new_head)
+        new_window.addstr(new_head[0], new_head[1], "#")
         
         # gets rid of the last position of the Snake's tail
         tail_remove = snake.pop()
-        new_window.addch(tail_remove[0], tail_remove[1], " ")
-
-        # draws the new head of the Snake in the Python terminal
-        # styles the Snake to a diamond shape
-        new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
+        new_window.addstr(tail_remove[0], tail_remove[1], " ")
 
 """
 Wrapper allows to restore the terminal to a sane state
