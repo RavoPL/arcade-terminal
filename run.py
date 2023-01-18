@@ -100,9 +100,9 @@ def main(stdscr):
         elif snake_move == curses.KEY_UP:
             new_head = (head[0] - 1, head[1])
         
-        # inserts a new head of the Snake, styles it to a hash symbol
+        # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
-        new_window.addstr(new_head[0], new_head[1], "#")
+        new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
         
         # gets rid of the last position of the Snake's tail
         tail_remove = snake.pop()
