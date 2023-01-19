@@ -110,7 +110,7 @@ def main(stdscr):
             apple = None
             # runs the following code so long as an apple is not present in the terminal box
             while apple is None:
-                new_apple = (random.randint(0, sh - 2), random.randint(0, sw - 2))
+                new_apple = (random.randint(1, sh-2), random.randint(1, sw-2))
                 # checks if position for apple spawning doesn't contain the Snake
                 # spawns a new apple if position is valid
                 if new_apple in snake:
