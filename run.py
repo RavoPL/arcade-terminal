@@ -1,11 +1,19 @@
 """
-Imports the 'curses' built-in Python library which can be used to create
-a terminal-independent screen-painting and key-handling facility
 Imports the 'random' built-in Python library which can be used to return
 a random number or value
+Imports the 'curses' built-in Python library which can be used to create
+a terminal-independent screen-painting and key-handling facility
 """
 import random
 import curses
+
+"""
+Function that loads and initializes curses colors
+
+def color_collection(new_window):
+    if curses.has_colors():
+        curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
+"""
 
 """
 Function that builds a 'current score' display in the center of the screen
@@ -85,9 +93,13 @@ def main(stdscr):
         (snakepos_y, snakepos_x - 2),
     ]
 
+    # TESTING CURSES COLORS !!!!!!!!!!!
+    curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
+    curses.init_pair(2, curses.COLOR_GREEN, curses.COLOR_BLACK)
+
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
     apple = create_apples(new_window, snake)
-    new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+    new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
     
     # initializes the score display in the terminal
     score = 0
@@ -151,14 +163,14 @@ def main(stdscr):
         
         # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
-        new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
+        new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND, curses.color_pair(2))
 
         # checks if the Snake ate the apple, removes it and creates a new one if eaten
         # increments by one point if apple is consumed
         # removes the tail of the Snake for every movement, overwritten by eating apples
         if snake[0] == apple:
             apple = create_apples(new_window, snake)
-            new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+            new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
             score += 1
             print_score(new_window, score)
         else:
