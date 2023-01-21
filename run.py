@@ -33,6 +33,24 @@ def create_apples(new_window, snake):
     return apple
 
 """
+List of available player directions for the Snake's movement in the terminal
+and
+Dictionary that prevents the player from pressing opposite keys and harming the Snake
+"""
+direcational_keys = [
+    curses.KEY_RIGHT,
+    curses.KEY_LEFT,
+    curses.KEY_DOWN,
+    curses.KEY_UP
+]
+opposite_keys = {
+    curses.KEY_RIGHT: curses.KEY_LEFT,
+    curses.KEY_LEFT: curses.KEY_RIGHT,
+    curses.KEY_DOWN: curses.KEY_UP,
+    curses.KEY_UP: curses.KEY_DOWN
+}
+
+"""
 Main function that sets the bounding box border
 as well as the details of the Snake and keyboard input
 """
@@ -111,6 +129,7 @@ def main(stdscr):
         some snake movement foundations by Indian Pythonista, with changes made by me
         """
         # listens for key input on arrow keys, which will change movement of Snake
+        # 
         if key in [curses.KEY_RIGHT, curses.KEY_LEFT, curses.KEY_DOWN, curses.KEY_UP]:
             snake_move = key
         
