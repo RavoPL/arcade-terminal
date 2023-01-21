@@ -6,6 +6,16 @@ import random
 import curses
 
 """
+Creates a function that builds a 'current score' display
+in the center of the screen
+"""
+def print_score(new_window, score):
+    sh, sw = new_window.getmaxyx()
+    score = 0
+    score_text = "Score: {}".format(score)
+    new_window.addstr(0, (sw // 2) - len(score_text)// 2, score_text)
+
+"""
 Main function that sets the bounding box border
 as well as the details of the Snake and keyboard input
 """
@@ -43,13 +53,6 @@ def main(stdscr):
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
     apple = (int(sh / 2), int(sw / 2))
     new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
-
-    # creates a function that builds a current score display in the center of the screen
-    def print_score(new_window, score):
-        sh, sw = new_window.getmaxyx()
-        score = 0
-        score_text = "Score: {}".format(score)
-        new_window.addstr(0, (sw // 2) - len(score_text)// 2, score_text)
     
     # initializes the score display in the terminal
     score = 0
