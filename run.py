@@ -8,14 +8,6 @@ import random
 import curses
 
 """
-Function that loads and initializes curses colors
-
-def color_collection(new_window):
-    if curses.has_colors():
-        curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
-"""
-
-"""
 Function that builds a 'current score' display in the center of the screen
 """
 def print_score(new_window, score):
@@ -93,9 +85,10 @@ def main(stdscr):
         (snakepos_y, snakepos_x - 2),
     ]
 
-    # TESTING CURSES COLORS !!!!!!!!!!!
-    curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
-    curses.init_pair(2, curses.COLOR_GREEN, curses.COLOR_BLACK)
+    # sets and initializes the curses color pairs, provided the terminal supports color
+    if curses.has_colors():
+        curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
+        curses.init_pair(2, curses.COLOR_GREEN, curses.COLOR_BLACK)
 
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
     apple = create_apples(new_window, snake)
