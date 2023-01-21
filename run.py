@@ -112,13 +112,6 @@ def main(stdscr):
             new_window.nodelay(0)
             new_window.getch()
             quit()
-        # displays game over screen if Snake's head collides with any other body part
-        if snake[0] in snake[1:]:
-            ate_self = "GAME OVER! You ate your own tail! Press any key to exit"
-            new_window.addstr(int(sh//2), int(sw//2) - len(ate_self)//2, ate_self)
-            new_window.nodelay(0)
-            new_window.getch()
-            quit()
 
         # listens for the 'Q' key press so the user can quit the terminal screen
         key = new_window.getch()
@@ -129,8 +122,8 @@ def main(stdscr):
         some snake movement foundations by Indian Pythonista, with changes made by me
         """
         # listens for key input on arrow keys, which will change movement of Snake
-        # 
-        if key in [curses.KEY_RIGHT, curses.KEY_LEFT, curses.KEY_DOWN, curses.KEY_UP]:
+        # prevents opposite key movement depending on which key is pressed
+        if key in direcational_keys and key != opposite_keys[snake_move]:
             snake_move = key
         
         # current, active head of the Snake
