@@ -37,7 +37,7 @@ List of available player directions for the Snake's movement in the terminal
 and
 Dictionary that prevents the player from pressing opposite keys and harming the Snake
 """
-direcational_keys = [
+directional_keys = [
     curses.KEY_RIGHT,
     curses.KEY_LEFT,
     curses.KEY_DOWN,
@@ -130,7 +130,7 @@ def main(stdscr):
         """
         # listens for key input on arrow keys, which will change movement of Snake
         # prevents opposite key movement depending on which key is pressed
-        if key in direcational_keys and key != opposite_keys[snake_move]:
+        if key in directional_keys and key != opposite_keys[snake_move]:
             snake_move = key
         
         # current, active head of the Snake
