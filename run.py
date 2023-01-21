@@ -112,6 +112,13 @@ def main(stdscr):
             new_window.nodelay(0)
             new_window.getch()
             quit()
+        # displays game over screen if Snake's head collides with any other body part
+        if snake[0] in snake[1:]:
+            ate_self = "GAME OVER! You ate your own tail! Press any key to exit"
+            new_window.addstr(int(sh//2), int(sw//2) - len(ate_self)//2, ate_self)
+            new_window.nodelay(0)
+            new_window.getch()
+            quit()
 
         # listens for the 'Q' key press so the user can quit the terminal screen
         key = new_window.getch()
