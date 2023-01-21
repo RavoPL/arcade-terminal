@@ -11,7 +11,9 @@ import curses
 Function that builds a 'current score' display in the center of the screen
 """
 def print_score(new_window, score):
+    # returns a tuple of the max height and width of the screen
     sh, sw = new_window.getmaxyx()
+    # sets initial score to 0 and centers the text above the terminal
     score = 0
     score_text = "Score: {}".format(score)
     new_window.addstr(0, (sw // 2) - len(score_text)// 2, score_text)
@@ -20,11 +22,13 @@ def print_score(new_window, score):
 Function that organically creates apples within the terminal box
 """
 def create_apples(new_window, snake):
-    sw = 80
-    sh = 24
+    # returns a tuple of the max height and width of the screen
+    sh, sw = new_window.getmaxyx()
+    # when there is no apple present in the terminal it creates a new one within the border
     apple = None
     while apple is None:
         apple = (random.randint(1, sh-2), random.randint(1, sw-2))
+        # if the apple is eaten, it removes an apple from the screen
         if apple in snake:
             apple = None
     return apple
@@ -67,12 +71,6 @@ def main(stdscr):
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
     apple = create_apples(new_window, snake)
     new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
-
-    """
-    # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
-    apple = (int(sh / 2), int(sw / 2))
-    new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
-    """
     
     # initializes the score display in the terminal
     score = 0
@@ -145,31 +143,6 @@ def main(stdscr):
         else:
             tail_remove = snake.pop()
             new_window.addstr(tail_remove[0], tail_remove[1], " ")
-        
-        """
-        apple consumption code from Mision Codigo, with changes made by me
-        """
-        """
-        # checks if the Snake ate the apple, then it removes it and generates
-        # a new one within the confines of the terminal box
-        if snake[0] == apple:
-            apple = None
-            # runs the following code so long as an apple is not present in the terminal box
-            while apple is None:
-                new_apple = (random.randint(1, sh-2), random.randint(1, sw-2))
-                # checks if position for apple spawning doesn't contain the Snake
-                # spawns a new apple if position is valid
-                if new_apple in snake:
-                    new_apple = None
-                else:
-                    apple = new_apple
-            # continuously draws new apples in random locations
-            new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
-        else:
-            # gets rid of the last position of the Snake's tail
-            tail_remove = snake.pop()
-            new_window.addstr(tail_remove[0], tail_remove[1], " ")
-        """
 
         # continously refreshes the window to update the terminal screen
         new_window.refresh()
