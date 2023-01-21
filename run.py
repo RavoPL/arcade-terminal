@@ -103,12 +103,8 @@ def main(stdscr):
         snake.insert(0, new_head)
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
         
-        # gets rid of the last position of the Snake's tail
-        tail_remove = snake.pop()
-        new_window.addstr(tail_remove[0], tail_remove[1], " ")
-        
         """
-        apple consumption code from Mision Codigo, with changes by me
+        apple consumption code from Mision Codigo, with changes made by me
         """
         # checks if the Snake ate the apple, then it removes it and generates
         # a new one within the confines of the terminal box
@@ -125,6 +121,10 @@ def main(stdscr):
                     apple = new_apple
             # continuously draws new apples in random locations
             new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+        else:
+            # gets rid of the last position of the Snake's tail
+            tail_remove = snake.pop()
+            new_window.addstr(tail_remove[0], tail_remove[1], " ")
 
         # continously refreshes the window to update the terminal screen
         new_window.refresh()
