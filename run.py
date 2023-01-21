@@ -76,6 +76,9 @@ def main(stdscr):
         if key == ord("q"):
             break
 
+        """
+        some snake movement foundations by Indian Pythonista, with changes made by me
+        """
         # listens for key input on arrow keys, which will change movement of Snake
         if key in [curses.KEY_RIGHT, curses.KEY_LEFT, curses.KEY_DOWN, curses.KEY_UP]:
             snake_move = key
@@ -104,6 +107,9 @@ def main(stdscr):
         tail_remove = snake.pop()
         new_window.addstr(tail_remove[0], tail_remove[1], " ")
         
+        """
+        apple consumption code from Mision Codigo, with changes by me
+        """
         # checks if the Snake ate the apple, then it removes it and generates
         # a new one within the confines of the terminal box
         if snake[0] == apple:
