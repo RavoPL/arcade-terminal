@@ -1,13 +1,14 @@
 """
 Imports the 'curses' built-in Python library which can be used to create
 a terminal-independent screen-painting and key-handling facility
+Imports the 'random' built-in Python library which can be used to return
+a random number or value
 """
 import random
 import curses
 
 """
-Creates a function that builds a 'current score' display
-in the center of the screen
+Creates a function that builds a 'current score' display in the center of the screen
 """
 def print_score(new_window, score):
     sh, sw = new_window.getmaxyx()
