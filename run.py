@@ -8,13 +8,26 @@ import random
 import curses
 
 """
-Creates a function that builds a 'current score' display in the center of the screen
+Function that builds a 'current score' display in the center of the screen
 """
 def print_score(new_window, score):
     sh, sw = new_window.getmaxyx()
     score = 0
     score_text = "Score: {}".format(score)
     new_window.addstr(0, (sw // 2) - len(score_text)// 2, score_text)
+
+"""
+Function that organically creates apples within the terminal box
+"""
+def create_apples(new_window, snake):
+    sw = 80
+    sh = 24
+    apple = None
+    while apple is None:
+        apple = (random.randint(1, sh-2), random.randint(1, sw-2))
+        if apple in snake:
+            apple = None
+    return apple
 
 """
 Main function that sets the bounding box border
@@ -52,8 +65,14 @@ def main(stdscr):
     ]
 
     # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
+    apple = create_apples(new_window, snake)
+    new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+
+    """
+    # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
     apple = (int(sh / 2), int(sw / 2))
     new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+    """
     
     # initializes the score display in the terminal
     score = 0
@@ -117,9 +136,19 @@ def main(stdscr):
         # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
+
+        # checks if the Snake ate the apple, removes it and creates a new one if eaten
+        # removes the tail of the Snake for every movement, overwritten by eating apples
+        if snake[0] == apple:
+            apple = create_apples(new_window, snake)
+            new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+        else:
+            tail_remove = snake.pop()
+            new_window.addstr(tail_remove[0], tail_remove[1], " ")
         
         """
         apple consumption code from Mision Codigo, with changes made by me
+        """
         """
         # checks if the Snake ate the apple, then it removes it and generates
         # a new one within the confines of the terminal box
@@ -140,6 +169,7 @@ def main(stdscr):
             # gets rid of the last position of the Snake's tail
             tail_remove = snake.pop()
             new_window.addstr(tail_remove[0], tail_remove[1], " ")
+        """
 
         # continously refreshes the window to update the terminal screen
         new_window.refresh()
