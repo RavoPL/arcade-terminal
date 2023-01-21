@@ -14,7 +14,6 @@ def print_score(new_window, score):
     # returns a tuple of the max height and width of the screen
     sh, sw = new_window.getmaxyx()
     # sets initial score to 0 and centers the text above the terminal
-    score = 0
     score_text = "Score: {}".format(score)
     new_window.addstr(0, (sw // 2) - len(score_text)// 2, score_text)
 
@@ -136,10 +135,13 @@ def main(stdscr):
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND)
 
         # checks if the Snake ate the apple, removes it and creates a new one if eaten
+        # increments by one point if apple is consumed
         # removes the tail of the Snake for every movement, overwritten by eating apples
         if snake[0] == apple:
             apple = create_apples(new_window, snake)
             new_window.addch(apple[0], apple[1], curses.ACS_DEGREE)
+            score += 1
+            print_score(new_window, score)
         else:
             tail_remove = snake.pop()
             new_window.addstr(tail_remove[0], tail_remove[1], " ")
