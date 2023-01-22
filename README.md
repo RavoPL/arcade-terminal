@@ -156,7 +156,7 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 ### Feature Testing
 
-1. Main Menu, Play, How to Play, Quit, Incorrect Input
+1. *Main Menu, Play, How to Play, Quit, Incorrect Input*
 
 | **Feature**  | **Expected Result** | **Action Taken** | **Result** |
 | ------------- | ------------- | ------------- | ------------- |
@@ -166,11 +166,20 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 | Quit the Application | Terminal shut down | Input '3' | Works as Intended |
 | Incorrect Input | Input not accepted, main menu restarted | Input any number other than '1', '2' or '3' | Works as Intended |
 
-2. Snake, Apple and Bounding Box
+2. *Snake*
 
-3. Score
+| **Feature**  | **Expected Result** | **Action Taken** | **Result** |
+| ------------- | ------------- | ------------- | ------------- |
+| Snake: *Movement* | Snake moves | Press any arrow key | Works as Intended |
+| Snake: *Blocked Opposites* | Snake can't move in opposite direction and eat itself | Press 'right' while going left | Works as Intended |
 
-4. Collision Tests
+3. *Apple*
+
+4. *Bounding Box*
+
+4. *Score*
+
+5. *Collision Tests*
 
 ## Known Bugs
 
