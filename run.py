@@ -11,6 +11,8 @@ import curses
 Function that creates an interactive main menu screen and its options
 ASCII Art center code by blhsing
 """
+
+
 def main_menu():
     title = '''      _                     _        _____                    _             _ 
       /_\  _ __ ___ __ _  __| | ___  /__   \___ _ __ _ __ ___ (_)_ __   __ _| |
@@ -22,6 +24,7 @@ def main_menu():
     print("[1] Play Arcade Terminal")
     print("[2] How to Play")
     print("[3] Quit the Application")
+
 
 main_menu()
 choice = int(input("Enter your choice here: "))
