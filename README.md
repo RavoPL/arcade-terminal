@@ -230,12 +230,26 @@ The only errors showing up are those of ASCII Art
 
 ## Deployment
 
-This project was deployed using Code Institute's mock terminal for Heroku.
+This project was deployed using *Code Institute's Python Terminal on Heroku*.
 
-You can fork the repository by following these steps:
+### GitHub
+
+You can *fork the repository* by following these steps:
 
 1. Go to the GitHub repository
 2. Click on Fork button in upper right hand corner
+
+You can *clone the repository* by following these steps:
+
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click on it
+3. Select if you prefer to clone using HTTPS, SSH or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open GitBash
+5. Change the current directory to the one you previously cloned
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press 'Enter' to create your local clone
+
+### Heroku
 
 After the repository is forked, you can deploy it by following these steps:
 
