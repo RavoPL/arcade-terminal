@@ -253,10 +253,23 @@ You can *clone the repository* by following these steps:
 
 After the repository is forked, you can deploy it by following these steps:
 
-1. Create a new Heroku app
-2. Set the buildbacks to *Python* and *NodeJS*, in that exact order
-3. Link the Heroku app to the repository you have forked
-4. Click on *Deploy*
+1. Create an account on Heroku or log into your existing one
+2. Go to the *Dashboard*
+3. Create a new app, add its name and your geographical region
+4. Click on *Create App*
+5. Go to your *Settings* tab
+6. Under *Config Vars*, add **PORT** for key and **8000** for value
+7. Click *Add*
+8. Click *Add Buildpack*
+9. Add **python** from the list and press *Save Changes*
+10. Add **nodejs** from the list and press *Save Changes*
+11. Ensure that python is placed **above** nodejs
+12. Scroll up and click *Deploy*
+13. Navigate to *Deployment Method* and click on *GitHub*
+14. Confirm that you want to *Connect to GitHub* and link your account
+15. Search for the GitHub repository you had previously forked
+16. Click *Connect*
+17. Scroll down and click on *Deploy Branch*
 
 ## Credits
 
