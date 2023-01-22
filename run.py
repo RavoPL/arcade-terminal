@@ -111,7 +111,7 @@ opposite_keys = {
 """
 Main function that sets the bounding box border
 as well as the details of the Snake and keyboard input
-basic functionality by Mision Codigo, expanded upon by me
+- basic functionality by Mision Codigo -, expanded upon and modified by me
 """
 
 
@@ -205,7 +205,7 @@ def main(stdscr):
             break
 
         """
-        snake movement foundations by Indian Pythonista, changes made by me
+        - snake movement foundations by Indian Pythonista -, changes made by me
         """
         # listens for key input on arrow keys, changes movement of Snake
         # prevents opposite key movement depending on which key is pressed
