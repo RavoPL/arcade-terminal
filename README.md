@@ -113,6 +113,11 @@ I decided to use functions, for/while loops, if statmenets, dictionaries and lis
 
 ### Examples of If Statements
 
+* *main menu if/elif* - initializes correct output depending on which number was input by the player
+* *main function if/elif* - responsible for initiating curse colouring, checking collisions, listening to keyboard input and creating new heads depending on Snake movement
+
+### Examples of Dictionaries
+
 ## Planning
 
 ### Flowchart
