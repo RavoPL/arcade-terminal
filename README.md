@@ -184,9 +184,14 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 | **Feature**  | **Expected Result** | **Action Taken** | **Result** |
 | ------------- | ------------- | ------------- | ------------- |
-| Bounding Box | A white box appears surrounding the game area | Run *python3 run.py* | Works as Intended |
+| Bounding Box | A white box appears, surrounding the game area | Run *python3 run.py* | Works as Intended |
 
 4. *Score*
+
+| **Feature**  | **Expected Result** | **Action Taken** | **Result** |
+| ------------- | ------------- | ------------- | ------------- |
+| Score Display | Current score is listed above the game area | Run *python3 run.py* | Works as Intended |
+| Increase Score | Score is incremented by one | Collide Snake's head with apple | Works as Intended |
 
 5. *Collision Tests*
 
