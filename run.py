@@ -29,13 +29,13 @@ def main_menu():
 main_menu()
 choice = int(input("Enter your choice here: "))
 
-while choice !=1:
-    if choice ==2:
+while choice != 1:
+    if choice == 2:
         # lists the rules of Arcade Terminal gameplay
         print("Use the arrow keys to move the Snake.")
-        print("Collect red apples to grow your Snake's tail and increase the Score.")
-        print("The game is over if you collide with the wall or your own tail.")
-    elif choice ==3:
+        print("Collect red apples to grow and increase the Score.")
+        print("The game is over if you collide with the wall or your tail.")
+    elif choice == 3:
         # quits the Arcade Terminal application
         print("Thank you for playing Arcade Terminal!")
         exit()
@@ -51,20 +51,25 @@ while choice !=1:
 """
 Function that builds a 'current score' display in the center of the screen
 """
+
+
 def print_score(new_window, score):
     # returns a tuple of the max height and width of the screen
     sh, sw = new_window.getmaxyx()
     # sets initial score to 0 and centers the text above the terminal
     score_text = "Score: {}".format(score)
-    new_window.addstr(0, (sw // 2) - len(score_text)// 2, score_text)
+    new_window.addstr(0, (sw // 2) - len(score_text) // 2, score_text)
+
 
 """
 Function that organically creates apples within the terminal box
 """
+
+
 def create_apples(new_window, snake):
     # returns a tuple of the max height and width of the screen
     sh, sw = new_window.getmaxyx()
-    # when there is no apple present in the terminal it creates a new one within the border
+    # when there is no apple present it creates a new one within the border
     apple = None
     while apple is None:
         apple = (random.randint(1, sh-2), random.randint(1, sw-2))
@@ -73,11 +78,14 @@ def create_apples(new_window, snake):
             apple = None
     return apple
 
+
 """
 List of available player directions for the Snake's movement in the terminal
 and
 Dictionary that prevents the player from pressing opposite keys and harming the Snake
 """
+
+
 directional_keys = [
     curses.KEY_RIGHT,
     curses.KEY_LEFT,
@@ -95,6 +103,8 @@ opposite_keys = {
 Main function that sets the bounding box border
 as well as the details of the Snake and keyboard input
 """
+
+
 def main(stdscr):
     # clears the screen at game start
     stdscr.clear()
@@ -194,7 +204,7 @@ def main(stdscr):
         # creates a new head of the Snake upon upwards movement
         elif snake_move == curses.KEY_UP:
             new_head = (head[0] - 1, head[1])
-        
+
         # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND, curses.color_pair(2))
