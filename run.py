@@ -43,13 +43,12 @@ while choice != 1:
         # informs the user of incorrect input and allows him to try again
         print("You've pressed the wrong number!")
         main_menu()
-        choice = int(input("Enter your choice here: "))
-    
+        choice = int(input("Enter your choice here: "))     
     main_menu()
     choice = int(input("Enter your choice here: "))
 
 """
-Function that builds a 'current score' display in the center of the screen
+Function that builds a current score display in the center of the screen
 """
 
 
@@ -82,7 +81,7 @@ def create_apples(new_window, snake):
 """
 List of available player directions for the Snake's movement in the terminal
 and
-Dictionary that prevents the player from pressing opposite keys and harming the Snake
+Dictionary prevents player from pressing opposite keys and harming the Snake
 """
 
 
@@ -144,11 +143,9 @@ def main(stdscr):
     # creates the initial apple, styles it to a degree symbol
     apple = create_apples(new_window, snake)
     new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
-    
     # initializes the score display in the terminal
     score = 0
     print_score(new_window, score)
-    
     # defines the starting right movement of the Snake
     snake_move = curses.KEY_RIGHT
 
@@ -188,7 +185,6 @@ def main(stdscr):
         # prevents opposite key movement depending on which key is pressed
         if key in directional_keys and key != opposite_keys[snake_move]:
             snake_move = key
-        
         # current, active head of the Snake
         head = snake[0]
 
