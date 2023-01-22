@@ -11,6 +11,7 @@ import curses
 Function that creates an interactive main menu screen and its options
 """
 def main_menu():
+    print("Welcome to Arcade Terminal!")
     print("[1] Play Arcade Terminal")
     print("[2] How to Play")
     print("[3] Quit the Application")
@@ -21,7 +22,9 @@ choice = int(input("Enter your choice here: "))
 while choice !=1:
     if choice ==2:
         # lists the rules of Arcade Terminal gameplay
-        print("CHOICE 1 SELECTED, TESTING")
+        print("Use the arrow keys to move the Snake.")
+        print("Collect red apples to grow your Snake's tail and increase the Score.")
+        print("The game is over if you collide with the wall or your own tail.")
     elif choice ==3:
         # quits the Arcade Terminal application
         print("Thank you for playing Arcade Terminal!")
