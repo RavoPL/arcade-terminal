@@ -8,6 +8,31 @@ import random
 import curses
 
 """
+Function that creates an interactive main menu screen and its options
+"""
+def main_menu():
+    print("[1] Play Arcade Terminal")
+    print("[2] How to Play")
+    print("[3] Exit the Application")
+
+main_menu()
+choice = int(input("Enter your choice here: "))
+
+while choice !=3:
+    if choice ==1:
+        # starts the entire Arcade Terminal game loop
+        print("CHOICE 1 SELECTED, TESTING")
+    elif choice ==2:
+        # lists the rules of Arcade Terminal gameplay
+        print("CHOICE 2 SELECTED, TESTING")
+    else:
+        # quits Arcade Terminal
+        print("CHOICE 3 SELECTED, TESTING")
+    
+    main_menu()
+    choice = int(input("Enter your choice here: "))
+
+"""
 Function that builds a 'current score' display in the center of the screen
 """
 def print_score(new_window, score):
