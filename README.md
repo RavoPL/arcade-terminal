@@ -29,7 +29,7 @@ The goal of the game is to make the Snake as large as possible before that happe
 
 ## Features
 
-This application consists of X features
+This application consists of 11 features
 
 ### Main Menu
 * Activated on application start
@@ -89,13 +89,19 @@ This application consists of X features
 * Ends the game upon collision with self and allows the player to exit the terminal by pressing any key
 <img src="docs/features/f-go2.png" alt="Self Collision" title="Self Collision">
 
+### Future Features
+
+* Increase the speed of the Snake with every apple eaten
+* Add a timer within which an apple needs to be consumed, otherwise it will disappear
+* Add rotten apples which remove a part of Snake's tail for eating them
+
 ## Data Model
 
 ## Planning
 
 ### Flowchart
 
-* Made on free version of Lucid.app
+Made on free version of *Lucid.app* (I had limited symbol count)
 
 <details>
   <summary>Arcade Terminal Flowchart</summary>
