@@ -38,6 +38,18 @@ This application consists of X features
 <br>
 <img src="docs/features/f-mainmenu.png" alt="Main Menu" title="Main Menu Screen">
 
+### How to Play
+* Fits into the terminal screen
+* Informs the user of the rules of gameplay
+<br>
+<img src="docs/features/f-mm2.png" alt="How to Play" title="How to Play Screen">
+
+### Quit the Application
+* Fits into the terminal screen
+* Allows the user to manually quit the application's terminal screen
+<br>
+<img src="docs/features/f-mm3.png" alt="Quit the App" title="Quit the App Screen">
+
 ## Data Model
 
 ## Planning
