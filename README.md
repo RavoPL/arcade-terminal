@@ -12,8 +12,9 @@ Developed by **Dorian Wolarz**, a Code Institute Student
 4. [Planning](#planning)
 5. [Technologies Used](#technologies-used)
 6. [Testing](#testing)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+6. [Known Bugs](#known-bugs)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
 ## How to Play
 
@@ -150,6 +151,12 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 * Lucid.app
 
 ## Testing
+
+## Known Bugs
+
+### Unfixed Bugs
+
+### Fixed Bugs
 
 ## Deployment
 
