@@ -35,6 +35,16 @@ The goal of the game is to make the Snake as large as possible before that happe
 
 ## Technologies Used
 
+### Languages
+
+* Python 3
+
+### Tools and Websites
+
+* Git
+* GitHub
+* GitPod
+
 ## Testing
 
 ## Deployment
