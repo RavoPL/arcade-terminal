@@ -170,10 +170,15 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 | **Feature**  | **Expected Result** | **Action Taken** | **Result** |
 | ------------- | ------------- | ------------- | ------------- |
-| Snake: *Movement* | Snake moves | Press any arrow key | Works as Intended |
-| Snake: *Blocked Opposites* | Snake can't move in opposite direction and eat itself | Press 'right' while going left | Works as Intended |
+| Movement | Snake moves | Press any arrow key | Works as Intended |
+| Blocked Opposites | Snake can't move in opposite direction and eat itself | Press 'right' while going left | Works as Intended |
 
 3. *Apple*
+
+| **Feature**  | **Expected Result** | **Action Taken** | **Result** |
+| ------------- | ------------- | ------------- | ------------- |
+| Initial Spawn | Apple appears on game start | Run *python3 run.py* | Works as Intended |
+| Randomized Apple Generation | Apple spawns in random places after being eaten | Collide Snake's head with apple | Works as Intended |
 
 4. *Bounding Box*
 
