@@ -118,8 +118,8 @@ def main(stdscr):
     # clears the screen at game start
     stdscr.clear()
     # sets the screen width and screen height of the bounding box
-    sw = 80
-    sh = 24
+    sw = 79
+    sh = 23
     # creates a new window and the border around it, listens for key strokes
     new_window = curses.newwin(sh + 1, sw + 1, 0, 0)
     new_window.border()
