@@ -118,7 +118,7 @@ def main(stdscr):
     # clears the screen at game start
     stdscr.clear()
     # disables the blinking of the cursor in terminal
-    # curses.curs_set(0)
+    curses.curs_set(0)
     # sets the screen width and screen height of the bounding box
     sw = 80
     sh = 24
