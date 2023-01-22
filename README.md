@@ -11,7 +11,7 @@ Developed by **Dorian Wolarz**, a Code Institute Student
 3. [Data Model](#data-model)
 4. [Planning](#planning)
 5. [Technologies Used](#technologies-used)
-6. [Testing](#testing)
+6. [Testing and Validation](#testing-and-validation)
 6. [Known Bugs](#known-bugs)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
@@ -149,10 +149,18 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 * GitHub
 * GitPod
 * Lucid.app
+* CI Python Linter
 
-## Testing
+## Testing and Validation
 
 ### CI Python Linter
+
+The only errors showing up are those of ASCII Art
+
+<details>
+  <summary>CI Python Linter Validation</summary>
+  <img src="docs/validation/v-plinter.png" alt="Python Validation" title="CI Python Linter Validation">
+</details>
 
 ### Feature Testing
 
@@ -238,6 +246,7 @@ After the repository is forked, you can deploy it by following these steps:
 
 * *Code Institute* for the Python Essentials template on GitHub
 * *Code Institute* for the deployment terminal on Heroku
+* *Code Institute* for the Python Linter validation website
 * [Documentation for *curses* library](https://docs.python.org/3/library/curses.html#module-curses)
 * [Documentation for *random* library](https://www.w3schools.com/python/module_random.asp)
 * [*ASCII Art Alignment* by blhsing](https://stackoverflow.com/questions/51606897/ascii-characters-text-align)
