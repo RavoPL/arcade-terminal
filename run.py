@@ -152,7 +152,12 @@ def main(stdscr):
 
     # creates the initial apple, styles it to a degree symbol
     apple = create_apples(new_window, snake)
-    new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
+    new_window.addch(
+        apple[0],
+        apple[1],
+        curses.ACS_DEGREE,
+        curses.color_pair(1)
+    )
     # initializes the score display in the terminal
     score = 0
     print_score(new_window, score)
@@ -173,7 +178,11 @@ def main(stdscr):
             game_over = (
                 "GAME OVER! You collided with the wall! Press any key to exit"
             )
-            new_window.addstr(int(sh//2), int(sw//2) - len(game_over)//2, game_over)
+            new_window.addstr(
+                int(sh//2),
+                int(sw//2) - len(game_over)//2,
+                game_over
+            )
             new_window.nodelay(0)
             new_window.getch()
             quit()
@@ -182,7 +191,11 @@ def main(stdscr):
             ate_self = (
                 "GAME OVER! You ate your own tail! Press any key to exit"
             )
-            new_window.addstr(int(sh//2), int(sw//2) - len(ate_self)//2, ate_self)
+            new_window.addstr(
+                int(sh//2),
+                int(sw//2) - len(ate_self)//2,
+                ate_self
+            )
             new_window.nodelay(0)
             new_window.getch()
             quit()
@@ -217,14 +230,24 @@ def main(stdscr):
 
         # inserts a new head of the Snake, styles it to a diamond symbol
         snake.insert(0, new_head)
-        new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND, curses.color_pair(2))
+        new_window.addch(
+            new_head[0],
+            new_head[1],
+            curses.ACS_DIAMOND,
+            curses.color_pair(2)
+        )
 
         # checks if the Snake ate apple, creates new one if eaten
         # increments by one point if apple is consumed
         # removes tail of Snake, overwritten by eating apples
         if snake[0] == apple:
             apple = create_apples(new_window, snake)
-            new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
+            new_window.addch(
+                apple[0],
+                apple[1],
+                curses.ACS_DEGREE,
+                curses.color_pair(1)
+            )
             score += 1
             print_score(new_window, score)
         else:
