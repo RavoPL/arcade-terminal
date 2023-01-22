@@ -97,6 +97,8 @@ This application consists of 11 features
 
 ## Data Model
 
+I decided to use functions, for/while loops, dictionaries and lists to complete this project.
+
 ## Planning
 
 ### Flowchart
