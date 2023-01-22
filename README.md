@@ -33,7 +33,7 @@ The goal of the game is to make the Snake as large as possible before that happe
 
 ## Features
 
-This application consists of 11 features
+This application consists of 11 features.
 
 ### Main Menu
 * Activated on application start
