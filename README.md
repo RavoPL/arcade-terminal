@@ -154,6 +154,11 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 ## Known Bugs
 
+| Encountered Bug | Potential Fix |
+| ------------- |:-------------:|
+| Snake moves faster vertically than horizontally | Reduce the size of the terminal to be of equal width and height |
+| Snake can increase speed by holding down key input | Game is controlled by getch() and .timeout, so separating input from time by calculating how much time is needed to sleep between key presses should work  |
+
 ### Unfixed Bugs
 
 ### Fixed Bugs
