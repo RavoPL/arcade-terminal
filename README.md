@@ -156,6 +156,22 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 ### Feature Testing
 
+1. Main Menu, Play, How to Play, Quit, Incorrect Input
+
+| **Feature**  | **Expected Result** | **Action Taken** | **Result** |
+| ------------- | ------------- | ------------- | ------------- |
+| Main Menu | Display full main menu and ASCII Art | Run *python3 run.py* | Works as Intended |
+| Play Arcade Terminal | Game is launched | Input '1' | Works as Intended |
+| How to Play | Rules of the game are listed | Input '2' | Works as Intended |
+| Quit the Application | Terminal shut down | Input '3' | Works as Intended |
+| Incorrect Input | Input not accepted, main menu restarted | Input any number other than '1', '2' or '3' | Works as Intended |
+
+2. Snake, Apple and Bounding Box
+
+3. Score
+
+4. Collision Tests
+
 ## Known Bugs
 
 ### Unfixed Bugs
