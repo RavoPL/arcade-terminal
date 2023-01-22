@@ -14,12 +14,13 @@ ASCII Art center code by blhsing
 
 
 def main_menu():
-    title = '''      _                     _        _____                    _             _ 
+    title = '''
+     _                     _        _____                    _             _
       /_\  _ __ ___ __ _  __| | ___  /__   \___ _ __ _ __ ___ (_)_ __   __ _| |
     // _\\| '__/ __/ _` |/ _` |/ _ \   / /\/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
     /  _  \ | | (_| (_| | (_| |  __/  / / |  __/ |  | | | | | | | | | | (_| | |
     \_/ \_/_|  \___\__,_|\__,_|\___|  \/   \___|_|  |_| |_| |_|_|_| |_|\__,_|_|'''
-    print('\n'.join(l.center(80) for l in title.splitlines()))
+    print('\n'.join(logo.center(80) for logo in title.splitlines()))
     print('\n')
     print("Welcome to Arcade Terminal!")
     print('\n')
@@ -52,7 +53,7 @@ while choice != 1:
         print("You've pressed the wrong number!")
         print('\n')
         main_menu()
-        choice = int(input("Enter your choice here: "))     
+        choice = int(input("Enter your choice here: "))
     main_menu()
     choice = int(input("Enter your choice here: "))
 
