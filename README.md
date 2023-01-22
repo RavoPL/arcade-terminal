@@ -3,7 +3,7 @@ Developed by **Dorian Wolarz**, a Code Institute Student
 
 *Arcade Terminal is a Python game which runs in the Code Institute mock terminal on the Heroku webpage. Users can play the classic game of Snake, where they maneuver the end of a growing line in order to collect and consume apples, all while avoiding game-ending collisions.*
 
-![LINK TO HEROKU VERSION](https://arcade-terminal.herokuapp.com/)
+[LINK TO HEROKU VERSION](https://arcade-terminal.herokuapp.com/)
 
 ![Arcade Terminal on a PC](docs/readme-computer.png)
 ![Arcade Terminal on an Arcade](docs/readme-arcade.png)
