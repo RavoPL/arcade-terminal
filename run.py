@@ -9,8 +9,15 @@ import curses
 
 """
 Function that creates an interactive main menu screen and its options
+ASCII Art center code by blhsing
 """
 def main_menu():
+    title = '''      _                     _        _____                    _             _ 
+      /_\  _ __ ___ __ _  __| | ___  /__   \___ _ __ _ __ ___ (_)_ __   __ _| |
+    // _\\| '__/ __/ _` |/ _` |/ _ \   / /\/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
+    /  _  \ | | (_| (_| | (_| |  __/  / / |  __/ |  | | | | | | | | | | (_| | |
+    \_/ \_/_|  \___\__,_|\__,_|\___|  \/   \___|_|  |_| |_| |_|_|_| |_|\__,_|_|'''
+    print('\n'.join(l.center(80) for l in title.splitlines()))
     print("Welcome to Arcade Terminal!")
     print("[1] Play Arcade Terminal")
     print("[2] How to Play")
@@ -116,7 +123,7 @@ def main(stdscr):
         (snakepos_y, snakepos_x - 2),
     ]
 
-    # sets and initializes the curses color pairs, provided the terminal supports color
+    # sets and initializes the curses color pairs if terminal supports color
     if curses.has_colors():
         curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
         curses.init_pair(2, curses.COLOR_GREEN, curses.COLOR_BLACK)
@@ -164,7 +171,7 @@ def main(stdscr):
         """
         some snake movement foundations by Indian Pythonista, with changes made by me
         """
-        # listens for key input on arrow keys, which will change movement of Snake
+        # listens for key input on arrow keys, changes movement of Snake
         # prevents opposite key movement depending on which key is pressed
         if key in directional_keys and key != opposite_keys[snake_move]:
             snake_move = key
