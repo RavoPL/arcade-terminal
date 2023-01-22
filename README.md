@@ -63,6 +63,37 @@ This application consists of X features
 <br>
 <img src="docs/features/f-mm4.png" alt="Incorrect Input" title="Incorrect Input Message">
 
+### Snake
+* Allows the player to move across the terminal and interact with its environment
+* Can grow in size depending on the number of apples eaten
+* Activates collisions with the terminal border and its own tail
+<br>
+<img src="docs/features/f-snake.png" alt="Snake" title="Snake">
+
+### Apple
+* Can be interacted with and consumed by the Snake
+* Spawns in random areas within the terminal screen
+<br>
+<img src="docs/features/f-apple.png" alt="Apple" title="Apple">
+
+### Score
+* Located in the center-top of the terminal border for clear visibility
+* Keeps track of current player score and increments by one after each apple eaten
+<br>
+<img src="docs/features/f-score.png" alt="Score" title="Score">
+
+### Wall Collision
+* Listens for the collision of the Snake
+* Ends the game upon collision with wall and allows the player to exit the terminal by pressing any key
+<br>
+<img src="docs/features/f-go1.png" alt="Wall Collision" title="Wall Collision">
+
+### Self Collision
+* Listens for the collision of the Snake
+* Ends the game upon collision with self and allows the player to exit the terminal by pressing any key
+<br>
+<img src="docs/features/f-go2.png" alt="Self Collision" title="Self Collision">
+
 ## Data Model
 
 ## Planning
