@@ -182,6 +182,10 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 4. *Bounding Box*
 
+| **Feature**  | **Expected Result** | **Action Taken** | **Result** |
+| ------------- | ------------- | ------------- | ------------- |
+| Bounding Box | A white box appears surrounding the game area | Run *python3 run.py* | Works as Intended |
+
 4. *Score*
 
 5. *Collision Tests*
