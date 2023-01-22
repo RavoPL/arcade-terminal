@@ -118,6 +118,13 @@ I decided to use functions, for/while loops, if statmenets, dictionaries and lis
 
 ### Examples of Dictionaries
 
+* *opposite_keys* - catalogues each directional key and its opposite so they can be cancelled
+
+### Examples of Lists
+
+* *directional_keys* - groups all directional arrow keys into one list so the Snake can move and opposite arrows can be cancelled out
+* *snake* - a list of tuples that creates the first three elements of the Snake at game start
+
 ## Planning
 
 ### Flowchart
