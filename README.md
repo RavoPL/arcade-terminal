@@ -38,17 +38,30 @@ This application consists of X features
 <br>
 <img src="docs/features/f-mainmenu.png" alt="Main Menu" title="Main Menu Screen">
 
-### How to Play
+### Play Arcade Terminal
+* Allows the player to activate the Snake game on correct input
 * Fits into the terminal screen
-* Informs the user of the rules of gameplay
 <br>
-<img src="docs/features/f-mm2.png" alt="How to Play" title="How to Play Screen">
+<img src="docs/features/f-mm1.png" alt="Play Arcade Terminal" title="Play the Game Screen">
+
+### How to Play
+* Informs the user of the rules of gameplay
+* Fits into the terminal screen
+<br>
+<img src="docs/features/f-mm2.png" alt="How to Play" title="How to Play Message">
 
 ### Quit the Application
-* Fits into the terminal screen
 * Allows the user to manually quit the application's terminal screen
+* Fits into the terminal screen
 <br>
-<img src="docs/features/f-mm3.png" alt="Quit the App" title="Quit the App Screen">
+<img src="docs/features/f-mm3.png" alt="Quit the App" title="Quit the App Message">
+
+### Incorrect Key Input
+* Informs the user of incorrect key input
+* Reloads the main menu upon incorrect input so that user can see his options and try again
+* Fits into the terminal screen
+<br>
+<img src="docs/features/f-mm4.png" alt="Incorrect Input" title="Incorrect Input Message">
 
 ## Data Model
 
