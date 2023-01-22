@@ -20,10 +20,13 @@ def main_menu():
     /  _  \ | | (_| (_| | (_| |  __/  / / |  __/ |  | | | | | | | | | | (_| | |
     \_/ \_/_|  \___\__,_|\__,_|\___|  \/   \___|_|  |_| |_| |_|_|_| |_|\__,_|_|'''
     print('\n'.join(l.center(80) for l in title.splitlines()))
+    print('\n')
     print("Welcome to Arcade Terminal!")
+    print('\n')
     print("[1] Play Arcade Terminal")
     print("[2] How to Play")
     print("[3] Quit the Application")
+    print('\n')
 
 
 main_menu()
@@ -32,16 +35,22 @@ choice = int(input("Enter your choice here: "))
 while choice != 1:
     if choice == 2:
         # lists the rules of Arcade Terminal gameplay
+        print('\n')
         print("Use the arrow keys to move the Snake.")
         print("Collect red apples to grow and increase the Score.")
         print("The game is over if you collide with the wall or your tail.")
+        print('\n')
     elif choice == 3:
         # quits the Arcade Terminal application
+        print('\n')
         print("Thank you for playing Arcade Terminal!")
+        print('\n')
         exit()
     else:
         # informs the user of incorrect input and allows him to try again
+        print('\n')
         print("You've pressed the wrong number!")
+        print('\n')
         main_menu()
         choice = int(input("Enter your choice here: "))     
     main_menu()
