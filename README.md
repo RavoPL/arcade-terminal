@@ -35,63 +35,53 @@ This application consists of X features
 * Activated on application start
 * Fits into the terminal screen
 * Allows the user to navigate the application's interactive options
-<br>
 <img src="docs/features/f-mainmenu.png" alt="Main Menu" title="Main Menu Screen">
 
 ### Play Arcade Terminal
 * Allows the player to activate the Snake game on correct input
 * Fits into the terminal screen
-<br>
 <img src="docs/features/f-mm1.png" alt="Play Arcade Terminal" title="Play the Game Screen">
 
 ### How to Play
 * Informs the user of the rules of gameplay
 * Fits into the terminal screen
-<br>
 <img src="docs/features/f-mm2.png" alt="How to Play" title="How to Play Message">
 
 ### Quit the Application
 * Allows the user to manually quit the application's terminal screen
 * Fits into the terminal screen
-<br>
 <img src="docs/features/f-mm3.png" alt="Quit the App" title="Quit the App Message">
 
 ### Incorrect Key Input
 * Informs the user of incorrect key input
 * Reloads the main menu upon incorrect input so that user can see his options and try again
 * Fits into the terminal screen
-<br>
 <img src="docs/features/f-mm4.png" alt="Incorrect Input" title="Incorrect Input Message">
 
 ### Snake
 * Allows the player to move across the terminal and interact with its environment
 * Can grow in size depending on the number of apples eaten
 * Activates collisions with the terminal border and its own tail
-<br>
 <img src="docs/features/f-snake.png" alt="Snake" title="Snake">
 
 ### Apple
 * Can be interacted with and consumed by the Snake
 * Spawns in random areas within the terminal screen
-<br>
 <img src="docs/features/f-apple.png" alt="Apple" title="Apple">
 
 ### Score
 * Located in the center-top of the terminal border for clear visibility
 * Keeps track of current player score and increments by one after each apple eaten
-<br>
 <img src="docs/features/f-score.png" alt="Score" title="Score">
 
 ### Wall Collision
 * Listens for the collision of the Snake
 * Ends the game upon collision with wall and allows the player to exit the terminal by pressing any key
-<br>
 <img src="docs/features/f-go1.png" alt="Wall Collision" title="Wall Collision">
 
 ### Self Collision
 * Listens for the collision of the Snake
 * Ends the game upon collision with self and allows the player to exit the terminal by pressing any key
-<br>
 <img src="docs/features/f-go2.png" alt="Self Collision" title="Self Collision">
 
 ## Data Model
