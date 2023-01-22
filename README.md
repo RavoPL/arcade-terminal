@@ -230,9 +230,16 @@ The only errors showing up are those of ASCII Art
 
 ## Deployment
 
-This project was deployed using *Code Institute's Python Terminal on Heroku*.
-
 ### GitHub
+
+This project was deployed using *Code Institute's Python Template* on GitHub.
+
+You can *deploy the repository* on GitHub by following these steps:
+
+1. In your GitHub repository navigate to the *Settings* tab
+2. In the menu on the left hand side select *Pages*
+3. For the source of your repo select *branch: main*
+4. After the webpage refreshes, you will see a ribbon on the top saying: *"Your site is published at https://ravopl.github.io/arcade-terminal/"*
 
 You can *fork the repository* by following these steps:
 
@@ -250,6 +257,8 @@ You can *clone the repository* by following these steps:
 7. Press 'Enter' to create your local clone
 
 ### Heroku
+
+This project was deployed using *Code Institute's Python Terminal* on Heroku.
 
 After the repository is forked, you can deploy it by following these steps:
 
