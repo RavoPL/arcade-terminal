@@ -93,6 +93,15 @@ This application consists of X features
 
 ## Planning
 
+### Flowchart
+
+* Made on free version of Lucid.app
+
+<details>
+  <summary>Arcade Terminal Flowchart</summary>
+  <img src="docs/flowchart/flowchart.png" alt="Flowchart Graph" title="Arcade Terminal Flowchart">
+</details>
+
 ## Technologies Used
 
 ### Languages
@@ -104,6 +113,7 @@ This application consists of X features
 * Git
 * GitHub
 * GitPod
+* Lucid.app
 
 ## Testing
 
