@@ -74,6 +74,11 @@ This application consists of X features
 * Keeps track of current player score and increments by one after each apple eaten
 <img src="docs/features/f-score.png" alt="Score" title="Score">
 
+### Bounding Box
+* Creates a visible border around the edge of the terminal screen
+* Informs the player of point of collision
+<img src="docs/features/f-box.png" alt="Box" title="Bounding Box">
+
 ### Wall Collision
 * Listens for the collision of the Snake
 * Ends the game upon collision with wall and allows the player to exit the terminal by pressing any key
