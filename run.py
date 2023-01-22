@@ -262,4 +262,4 @@ def main(stdscr):
 Wrapper allows to restore the terminal to a sane state
 if the application raises an error
 """
-# curses.wrapper(main)
+curses.wrapper(main)
