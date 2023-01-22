@@ -55,6 +55,13 @@ After the repository is forked, you can deploy it by following these steps:
 
 ## Credits
 
+* *Code Institute* for the Python Essentials template on GitHub
 * *Code Institute* for the deployment terminal on Heroku
 * [Documentation for *curses* library](https://docs.python.org/3/library/curses.html#module-curses)
 * [Documentation for *random* library](https://www.w3schools.com/python/module_random.asp)
+* [*ASCII Art Alignment* by blhsing](https://stackoverflow.com/questions/51606897/ascii-characters-text-align)
+* [*Text to ASCII Art* website by patorjk](https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Ogre&t=Arcade%20Terminal)
+* [TUTORIAL and some Code Help: *Snake Game for Terminal* by Indian Pythonista](https://www.youtube.com/watch?v=BvbqI6eDh0c)
+* [TUTORIAL: *Snake in the Powershell* by Clear Code](https://www.youtube.com/watch?v=lAIawk2IVIM)
+* [TUTORIAL: *Snake Game in Python* by Patrick Loeber](https://www.youtube.com/watch?v=M_npdRYD4K0)
+* [TUTORIAL: *Python Snake Game* by Mision Codigo](https://www.youtube.com/watch?v=_IKIkRMfZJA)
