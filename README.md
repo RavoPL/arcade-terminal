@@ -195,6 +195,11 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 5. *Collision Tests*
 
+| **Feature**  | **Expected Result** | **Action Taken** | **Result** |
+| ------------- | ------------- | ------------- | ------------- |
+| Wall Collision | Game Over at collision with wall | Collide Snake's head with the bounding box | Works as Intended |
+| Self Collision | Game Over at collision with self | Collide Snake's head with its tail | Works as Intended |
+
 ## Known Bugs
 
 ### Unfixed Bugs
