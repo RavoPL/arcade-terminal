@@ -154,14 +154,21 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 ## Known Bugs
 
+### Unfixed Bugs
+
 | Encountered Bug | Potential Fix |
 | ------------- |:-------------:|
 | Snake moves faster vertically than horizontally | Reduce the size of the terminal to be of equal width and height |
-| Snake can increase speed by holding down key input | Game is controlled by getch() and .timeout, so separating input from time by calculating how much time is needed to sleep between key presses should work  |
-
-### Unfixed Bugs
+| Snake can increase speed by holding down key input | Game is controlled by getch() and .timeout, so separating input from time by calculating how much time is needed to sleep between key presses should work |
 
 ### Fixed Bugs
+
+| Encountered Bug | The Fix Used |
+| ------------- |:-------------:|
+| Randomized apple generation not working | Switched the x and y values with the y and x used for tuples |
+| Terminal freezing and crashing with no error | Added a curses.wrapper to restore terminal to sane state and display error message as normal |
+| Game shutting down immediately after collision | Add new_window.getch() to listen for a key press before closing the terminal |
+| Apples spawning within terminal border | Minus '2' from the sh (screen height) and sw (screen width) values in the apple while loop |
 
 ## Deployment
 
