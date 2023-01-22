@@ -141,7 +141,7 @@ def main(stdscr):
         curses.init_pair(1, curses.COLOR_RED, curses.COLOR_BLACK)
         curses.init_pair(2, curses.COLOR_GREEN, curses.COLOR_BLACK)
 
-    # creates the initial apple centered in the middle of the screen, styles it to a degree symbol
+    # creates the initial apple, styles it to a degree symbol
     apple = create_apples(new_window, snake)
     new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
     
@@ -168,7 +168,7 @@ def main(stdscr):
             new_window.nodelay(0)
             new_window.getch()
             quit()
-        # displays game over screen if Snake's head collides with any other body part
+        # displays game over screen if Snake's head collides with body part
         if snake[0] in snake[1:]:
             ate_self = "GAME OVER! You ate your own tail! Press any key to exit"
             new_window.addstr(int(sh//2), int(sw//2) - len(ate_self)//2, ate_self)
@@ -176,13 +176,13 @@ def main(stdscr):
             new_window.getch()
             quit()
 
-        # listens for the 'Q' key press so the user can quit the terminal screen
+        # listens for the Q key so user can quit terminal screen
         key = new_window.getch()
         if key == ord("q"):
             break
 
         """
-        some snake movement foundations by Indian Pythonista, with changes made by me
+        snake movement foundations by Indian Pythonista, changes made by me
         """
         # listens for key input on arrow keys, changes movement of Snake
         # prevents opposite key movement depending on which key is pressed
@@ -209,9 +209,9 @@ def main(stdscr):
         snake.insert(0, new_head)
         new_window.addch(new_head[0], new_head[1], curses.ACS_DIAMOND, curses.color_pair(2))
 
-        # checks if the Snake ate the apple, removes it and creates a new one if eaten
+        # checks if the Snake ate apple, creates new one if eaten
         # increments by one point if apple is consumed
-        # removes the tail of the Snake for every movement, overwritten by eating apples
+        # removes tail of Snake, overwritten by eating apples
         if snake[0] == apple:
             apple = create_apples(new_window, snake)
             new_window.addch(apple[0], apple[1], curses.ACS_DEGREE, curses.color_pair(1))
@@ -223,6 +223,7 @@ def main(stdscr):
 
         # continously refreshes the window to update the terminal screen
         new_window.refresh()
+
 
 """
 Wrapper allows to restore the terminal to a sane state
