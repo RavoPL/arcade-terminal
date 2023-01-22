@@ -29,6 +29,15 @@ The goal of the game is to make the Snake as large as possible before that happe
 
 ## Features
 
+This application consists of X features
+
+### Main Menu
+* Activated on application start
+* Fits into the terminal screen
+* Allows the user to navigate the application's interactive options
+<br>
+<img src="docs/features/f-mainmenu.png" alt="Main Menu" title="Main Menu Screen">
+
 ## Data Model
 
 ## Planning
