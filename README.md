@@ -99,6 +99,13 @@ This application consists of 11 features
 
 I decided to use functions, for/while loops, dictionaries and lists to complete this project.
 
+### Functions
+
+* *main_menu* - creates an interactive main menu screen
+* *print_score* - builds a current score display in the center of the screen
+* *create_apples* - creates random apples within the terminal box and applies basic logic for collisions
+* *main* - sets the bounding box border, details the keyboard input and game interactivity
+
 ## Planning
 
 ### Flowchart
