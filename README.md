@@ -152,6 +152,10 @@ Made on free version of *Lucid.app* (I had limited symbol count)
 
 ## Testing
 
+### CI Python Linter
+
+### Feature Testing
+
 ## Known Bugs
 
 ### Unfixed Bugs
