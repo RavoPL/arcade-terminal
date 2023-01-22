@@ -13,21 +13,24 @@ Function that creates an interactive main menu screen and its options
 def main_menu():
     print("[1] Play Arcade Terminal")
     print("[2] How to Play")
-    print("[3] Exit the Application")
+    print("[3] Quit the Application")
 
 main_menu()
 choice = int(input("Enter your choice here: "))
 
-while choice !=3:
-    if choice ==1:
-        # starts the entire Arcade Terminal game loop
-        print("CHOICE 1 SELECTED, TESTING")
-    elif choice ==2:
+while choice !=1:
+    if choice ==2:
         # lists the rules of Arcade Terminal gameplay
-        print("CHOICE 2 SELECTED, TESTING")
+        print("CHOICE 1 SELECTED, TESTING")
+    elif choice ==3:
+        # quits the Arcade Terminal application
+        print("Thank you for playing Arcade Terminal!")
+        exit()
     else:
-        # quits Arcade Terminal
-        print("CHOICE 3 SELECTED, TESTING")
+        # informs the user of incorrect input and allows him to try again
+        print("You've pressed the wrong number!")
+        main_menu()
+        choice = int(input("Enter your choice here: "))
     
     main_menu()
     choice = int(input("Enter your choice here: "))
