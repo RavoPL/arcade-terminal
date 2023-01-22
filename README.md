@@ -294,4 +294,4 @@ After the repository is forked, you can deploy it by following these steps:
 * [TUTORIAL and some Code Help: *Snake Game for Terminal* by Indian Pythonista](https://www.youtube.com/watch?v=BvbqI6eDh0c)
 * [TUTORIAL: *Snake in the Powershell* by Clear Code](https://www.youtube.com/watch?v=lAIawk2IVIM)
 * [TUTORIAL: *Snake Game in Python* by Patrick Loeber](https://www.youtube.com/watch?v=M_npdRYD4K0)
-* [TUTORIAL: *Python Snake Game* by Mision Codigo](https://www.youtube.com/watch?v=_IKIkRMfZJA)
+* [TUTORIAL and some Code Help: *Python Snake Game* by Mision Codigo](https://www.youtube.com/watch?v=_IKIkRMfZJA)

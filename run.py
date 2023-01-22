@@ -111,6 +111,7 @@ opposite_keys = {
 """
 Main function that sets the bounding box border
 as well as the details of the Snake and keyboard input
+basic functionality by Mision Codigo, expanded upon by me
 """
 
 
